@@ -89,7 +89,7 @@
         android:id="@+id/radio_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Negetive"
+        android:text="Negative"
         />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
