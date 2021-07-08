@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Test_Result</string>
-    <string name="baseURL">http://192.168.154.5:3000</string>
+    <string name="baseURL">http://192.168.247.5:3000</string>
 </resources>

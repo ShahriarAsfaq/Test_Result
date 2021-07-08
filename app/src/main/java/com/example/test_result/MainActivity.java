@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton radioButton;
     Button submit;
     EditText patient_nid;
+    CheckBox legal_concent;
 
     String result,nid;
     private ApiServices apiServices;
@@ -33,12 +35,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         radioGroup = findViewById(R.id.radioGroup);
         patient_nid=findViewById(R.id.patient_nid);
+        legal_concent=findViewById(R.id.checkBox);
         submit=findViewById(R.id.submit);
+        submit.setEnabled(false);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(getResources().getString(R.string.baseURL))
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         apiServices = retrofit.create(ApiServices.class);
+        legal_concent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(legal_concent.isChecked()){
+                    submit.setEnabled(true);
+                }
+                else{
+                    submit.setEnabled(false);
+                }
+            }
+        });
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

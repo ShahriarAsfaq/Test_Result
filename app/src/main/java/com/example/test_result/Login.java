@@ -62,9 +62,12 @@ public class Login extends AppCompatActivity {
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                Toast.makeText(getApplicationContext(),"on response",Toast.LENGTH_SHORT).show();
+                int code = response.code();
+                String a = String.valueOf(code);
+                Toast.makeText(getApplicationContext(),a,Toast.LENGTH_SHORT).show();
                 if (response.code() == 200) {
-
+                    Toast.makeText(Login.this, "",
+                            Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(Login.this,MainActivity.class);
                     startActivity(intent);
 
