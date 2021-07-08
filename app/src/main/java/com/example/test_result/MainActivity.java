@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
 
                 } else if (response.code() == 400) {
-                    Toast.makeText(MainActivity.this, "Wrong Credentials",
+                    Toast.makeText(MainActivity.this, "Something Went Wrong, Retry!",
                             Toast.LENGTH_LONG).show();
                 }
 

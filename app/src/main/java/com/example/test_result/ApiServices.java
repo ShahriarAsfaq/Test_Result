@@ -9,6 +9,6 @@ public interface ApiServices {
     @POST("/medicalRepresentativeLogin")
     Call<Void>executemedicLogin(@Body HashMap<String, String> parameters);
 
-    @POST("/covidResult")
+    @POST("/coronaResultUpdate")
     Call<Void>executeresult(@Body HashMap<String, String> results);
 }
