@@ -23,17 +23,17 @@
 
     <EditText
         android:id="@+id/patient_nid"
-        android:hint="Patient's NID"
-        android:inputType="textPersonName"
-        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regular"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:textSize="16sp"
-        />
+        android:fontFamily="@font/regular"
+        android:hint="Patient's NID"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="16sp" />
 
 
     <RadioGroup
@@ -50,18 +50,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Positive"
-            />
+            android:minHeight="48dp"
+            android:text="Positive" />
 
         <RadioButton
             android:id="@+id/radio_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Negative"
-            />
+            android:minHeight="48dp"
+            android:text="Negative" />
     </RadioGroup>
 
+    <EditText
+        android:id="@+id/xlUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Enter google Excel file link"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -80,16 +91,18 @@
 
     <Button
         android:id="@+id/submit"
-        android:text="Submit"
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:textAllCaps="false"
+        android:background="@drawable/button"
         android:fontFamily="@font/bold"
-        android:textColor="#fff"
-        android:background="@drawable/button"/>
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+
 
 
 </LinearLayout>

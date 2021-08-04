@@ -24,42 +24,42 @@
 
     <EditText
         android:id="@+id/email"
-        android:hint="Email"
-        android:inputType="textPersonName"
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regular"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:textSize="16sp"/>
+        android:fontFamily="@font/regular"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/password"
-        android:hint="Password"
-        android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/regular"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:textSize="16sp"
-        />
+        android:fontFamily="@font/regular"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/login_btn"
-        android:text="Log In"
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:textAllCaps="false"
-        android:fontFamily="@font/bold"
-        android:textColor="#fff"
         android:background="@drawable/button"
-        />
+        android:fontFamily="@font/bold"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
 
 </LinearLayout>
