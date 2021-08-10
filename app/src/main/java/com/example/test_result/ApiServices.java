@@ -11,4 +11,7 @@ public interface ApiServices {
 
     @POST("/coronaResultUpdate")
     Call<Void>executeresult(@Body HashMap<String, String> results);
+
+    @POST("/googleSheetUpdate")
+    Call<Void>executeurl(@Body HashMap<String, String> url);
 }

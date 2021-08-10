@@ -60,18 +60,19 @@
             android:fontFamily="@font/bold"
             android:minHeight="48dp"
             android:text="Negative" />
+
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/xlUrl"
+    <Button
+        android:id="@+id/xl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Enter google Excel file link"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:text="Select Google Excel sheet"
+        android:textColor="#fff"
+        android:background="@drawable/button"
+        android:fontFamily="@font/bold"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"/>
 
     <CheckBox
@@ -101,8 +102,6 @@
         android:text="Submit"
         android:textAllCaps="false"
         android:textColor="#fff" />
-
-
 
 
 </LinearLayout>
