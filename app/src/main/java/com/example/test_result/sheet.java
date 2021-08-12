@@ -51,7 +51,7 @@ public class sheet extends AppCompatActivity {
     }
     private void geturl() {
         HashMap<String, String> url = new HashMap<>();
-            url.put("url", "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=1wyWse6RwXHx8L8xB4yfC_HcVADCtEivhIlx7l30kX5k&sheet=Sheet1");
+            url.put("url", "a");
 
 
         Call<Void> call = apiServices.executeurl(url);
