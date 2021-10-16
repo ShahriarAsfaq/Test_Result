@@ -81,13 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 int radioId = radioGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
                 result= radioButton.getText().toString();
-                nid=patient_nid.getText().toString();
+                nid= patient_nid.getText().toString();
 
-                Toast.makeText(MainActivity.this,url, Toast.LENGTH_SHORT).show();
-                /*if(nid!=""&&result!="") {
-                    nid_list.add(nid);
-                    result_list.add(result);
-                }*/
                 getPosts();
 
             }
@@ -102,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
         HashMap<String, String> results = new HashMap<>();
             results.put("nid", nid);
             results.put("result", result);
-
+        Log.d("nid = ",nid);
+        Log.d("result = ",result);
 
         Call<Void> call = apiServices.executeresult(results);
         Toast.makeText(getApplicationContext(),"get post",Toast.LENGTH_SHORT).show();
@@ -113,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.code() == 200) {
                     Toast.makeText(MainActivity.this, "Result submitted Successfully",
                             Toast.LENGTH_LONG).show();
+                    Log.d("code =","succesful");
                       Intent intent=new Intent(MainActivity.this,MainActivity.class);
                       startActivity(intent);
 

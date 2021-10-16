@@ -36,7 +36,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class sheet extends AppCompatActivity {
     Intent intent= getIntent();
     WebView webView;
-    Button submit;
+    Button submitsheet;
     ArrayList<String> list = new ArrayList<>();
     ArrayList<String> statuslist= new ArrayList<>();
     private ApiServices apiServices;
@@ -46,7 +46,7 @@ public class sheet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sheet);
         webView= (WebView)findViewById(R.id.webView);
-        submit=(Button) findViewById(R.id.submitsheet);
+        submitsheet=(Button) findViewById(R.id.submitsheet);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(getResources().getString(R.string.baseURL))
                 .addConverterFactory(GsonConverterFactory.create())
@@ -60,7 +60,7 @@ public class sheet extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://docs.google.com/spreadsheets/d/1wyWse6RwXHx8L8xB4yfC_HcVADCtEivhIlx7l30kX5k/edit?fbclid=IwAR1CABAv1dvS2x5erFOX2bSoLaEksJB32mQdLaVAlL76r9mxVCh6fgK4uhk#gid=0");
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        submitsheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               /*  new Thread(new Runnable() {
@@ -199,6 +199,7 @@ public class sheet extends AppCompatActivity {
         HashMap<Integer, String> pData = new HashMap<>();
             for(int i=0;i<list.size();i++){
                 pData.put(i,list.get(i));
+                Log.d("list",list.get(i).toString());
                 if(i==list.size()-1){
                     Call<Void> call = apiServices.executePData(pData);
                     //Toast.makeText(getApplicationContext(),"get post",Toast.LENGTH_SHORT).show();
